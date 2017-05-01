@@ -1,0 +1,36 @@
+{
+  "name": "mercury",
+  "version": "1.0.0",
+  "description": "Easy JSON converter into CSV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahmanda/mercury.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "vuejs",
+    "json",
+    "csv"
+  ],
+  "author": "Rahmanda Wibowo <rahmandawibowo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rahmanda/mercury/issues"
+  },
+  "homepage": "https://github.com/rahmanda/mercury#readme",
+  "devDependencies": {
+    "browserify": "14.0.0",
+    "gulp": "3.9.0",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-cssnano": "2.1.2",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-uglify": "2.1.2",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "1.1.0"
+  }
+}

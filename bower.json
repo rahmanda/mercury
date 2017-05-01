@@ -1,0 +1,24 @@
+{
+  "name": "mercury",
+  "description": "Easy JSON converter into CSV",
+  "main": "index.js",
+  "authors": [
+    "Rahmanda Wibowo <rahmandawibowo@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "vuejs",
+    "json",
+    "csv"
+  ],
+  "homepage": "https://github.com/rahmanda/mercury",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

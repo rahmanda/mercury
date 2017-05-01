@@ -1,0 +1,25 @@
+// =================================================================
+// Typography Settings
+// =================================================================
+// You should declare list of typography settings on theme folder,
+// then include it on app.scss
+
+$theme-font-size: (
+    small: 12px,
+    medium: 14px,
+    large: 18px,
+    x-large: 20px,
+    xx-large: 22px,
+    hero: 150px
+);
+
+$theme-line-height: (
+    small: 1.4,
+    medium: 1.4,
+    large: 1.2,
+    x-large: 1.2,
+    xx-large: 1.2,
+    hero: 1.2
+);
+
+$theme-font-family: "Helvetica", Arial, Sans-serif !important;

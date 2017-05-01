@@ -1,0 +1,20 @@
+// ===========================================
+// Config
+// ===========================================
+// See how it has the same structure as main
+// framework?
+
+$theme-max-breakpoint: 100%;
+
+$theme-box-enable: false;
+$theme-callout-enable: false;
+$theme-dropdown-enable: false;
+$theme-flag-enable: false;
+$theme-icon-enable: false;
+$theme-modal-enable: false;
+$theme-paginator-enable: false;
+$theme-post-enable: false;
+$theme-badge-enable: false;
+
+@import "base/typography";
+@import "ayu";
