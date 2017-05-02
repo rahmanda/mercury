@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Mercury",
+  "description": "Easy JSON converter into CSV",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_icon": "assets/img/mercury60.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "assets/img/mercury60.png",
+    "128": "assets/img/mercury60.png"
+  }
+}
