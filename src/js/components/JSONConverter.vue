@@ -30,6 +30,13 @@
         </div>
       </div>
     </div>
+    <div class='row' v-if='errors.length > 0'>
+      <div class='field gr-12'>
+        <div class='callout callout--block callout--red'>
+          <div v-for='error in errors'>{{ error.message }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -43,31 +50,41 @@
         keys: '',
         filename: '',
         csv: '',
-        showGeneratedCSV: true
+        showGeneratedCSV: false,
+        errors: []
       };
     },
     methods: {
       convertToCSV: function(data) {
-        var columnDelimiter = ',';
-        var lineDelimiter = '\n';
-        var keys = Object.keys(data[0])
-        var result = '';
-        result += keys.join(columnDelimiter);
-        result += lineDelimiter;
-
-        data.forEach(function(item) {
-          var ctr = 0;
-          keys.forEach(function(key) {
-            if (ctr > 0) result += columnDelimiter;
-            result += item[key];
-            ctr++;
-          });
+        if (data.length > 0) {
+          var columnDelimiter = ',';
+          var lineDelimiter = '\n';
+          var keys = Object.keys(data[0])
+          var result = '';
+          result += keys.join(columnDelimiter);
           result += lineDelimiter;
-        });
-        return result;
+
+          data.forEach(function(item) {
+            var ctr = 0;
+            keys.forEach(function(key) {
+              if (ctr > 0) result += columnDelimiter;
+              result += item[key];
+              ctr++;
+            });
+            result += lineDelimiter;
+          });
+          return result;
+        } else {
+          return '';
+        }
       },
       cleanJSON: function() {
-        var data = JSON.parse(this.json);
+        try {
+          var data = JSON.parse(this.json);
+        } catch (exception) {
+          this.errors.push(exception);
+          return [];
+        }
         var cleanData = data;
         if (this.startingPoint !== '') {
           var startingPoint = this.startingPoint.split(',').map(function(item) { return item.trim(); });
@@ -92,9 +109,12 @@
         return cleanData;
       },
       convert: function() {
+        this.errors = [];
         var data = this.cleanJSON();
         this.csv = this.convertToCSV(data);
-        this.showGeneratedCSV = true;
+        if (this.errors.length === 0) {
+          this.showGeneratedCSV = true;
+        }
       },
       download: function() {
         var csv, data, link, filename;
@@ -102,7 +122,12 @@
         if (this.csv !== '' && !this.csv.match(/^data:text\/csv/i)) {
           csv = 'data:text/csv;charset=utf-8,' + this.csv;
         }
-        data = encodeURI(csv);
+        try {
+          data = encodeURI(csv);
+        } catch (exception) {
+          this.errors.push(exception);
+          return;
+        }
         link = document.createElement('a');
         link.setAttribute('href', data);
         link.setAttribute('download', filename);
