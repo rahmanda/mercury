@@ -1,6 +1,6 @@
 {
   "name": "mercury",
-  "description": "Easy JSON converter into CSV",
+  "description": "Easy JSON to CSV converter",
   "main": "index.js",
   "authors": [
     "Rahmanda Wibowo <rahmandawibowo@gmail.com>"
