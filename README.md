@@ -9,4 +9,4 @@ Features:
 3. Download CSV: Add filename and hit the button. Your browser will automatically download the generated CSV for you.
 
 TODO:
-- [] Handle object inside object
+- [ ] Handle object inside object
