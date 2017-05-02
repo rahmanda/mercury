@@ -7,11 +7,13 @@
       </div>
       <div class='field gr-12'>
         <label class='field__label'>Starting Point</label>
-        <input type='text' class='field__input' v-model='startingPoint'>
+        <input type='text' class='field__input' v-model='startingPoint' placeholder='Multi value should be separated by comma, e.g "object, data"'>
+        <small class='u-text--small'>Provide starting point of your designated array inside JSON object here (optional)</small>
       </div>
       <div class='field gr-12'>
         <label class='field__label'>Keys</label>
-        <input type='text' class='field__input' v-model='keys'>
+        <input type='text' class='field__input' v-model='keys' placeholder='Multi value should be separated by comma, e.g "object, data"'>
+        <small class='u-text--small'>Setup which keys you want to keep on csv (optional)</small>
       </div>
       <div class='field gr-12 u-clearfix'>
         <button class='btn btn--cta btn--medium' style='float: right;' v-on:click='convert'>Convert</button>
