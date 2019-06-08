@@ -50,9 +50,9 @@ gulp.task('serve', ['sass', 'browserify', 'static', 'images'], function() {
 gulp.task('sass', function() {
   return gulp.src(PATH.sass.src)
     .pipe(sass({
-      includePaths: ['bower_components/ayu/src',
-                     'bower_components/gridle/sass',
-                     'bower_components/Ionicons/scss']
+      includePaths: ['node_modules/ayu-css/src',
+                     'node_modules/gridle/sass',
+                     'node_modules/Ionicons/scss']
     }))
     .pipe(autoprefixer())
     .pipe(cssnano())

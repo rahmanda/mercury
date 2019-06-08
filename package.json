@@ -20,18 +20,20 @@
   },
   "homepage": "https://github.com/rahmanda/mercury#readme",
   "devDependencies": {
-    "browserify": "14.0.0",
-    "gulp": "3.9.0",
-    "gulp-autoprefixer": "3.1.1",
-    "gulp-cssnano": "2.1.2",
-    "gulp-rename": "1.2.2",
-    "gulp-sass": "3.1.0",
-    "gulp-uglify": "2.1.2",
-    "vinyl-buffer": "1.0.0",
-    "vinyl-source-stream": "1.1.0",
-    "vueify": "9.4.0"
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vueify": "^9.4.0"
   },
   "dependencies": {
-    "vue": "2.3.0"
+    "ayu-css": "^0.2.7",
+    "ionicons": "^2.0.1",
+    "vue": "^2.3.0"
   }
 }
